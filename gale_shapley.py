@@ -21,12 +21,15 @@ def start(girls, boys, attribution):
                     attribution[current_choice.name] = girl
                     affected = True
                     handleAffectation(current_attributed_id)
-                elif my_rank < current_ranked:
+                elif my_rank <= current_ranked:
                     choice += 1
+
+
 
     for girl in girls:
         handleAffectation(girl)
-    print(attribution)
+
+    return attribution
 
 
 
